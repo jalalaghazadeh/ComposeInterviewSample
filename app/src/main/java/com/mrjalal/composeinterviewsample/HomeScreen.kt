@@ -16,14 +16,14 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
-import androidx.hilt.navigation.compose.hiltViewModel
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterialApi::class, ExperimentalComposeUiApi::class)
 @Composable
 fun HomeScreen() {
     val scope = rememberCoroutineScope()
-    val bottomSheetState = rememberModalBottomSheetState(initialValue = ModalBottomSheetValue.Hidden)
+    val bottomSheetState =
+        rememberModalBottomSheetState(initialValue = ModalBottomSheetValue.Hidden)
 
     ModalBottomSheetLayout(
         sheetState = bottomSheetState,
@@ -47,11 +47,11 @@ fun HomeScreen() {
                     .imePadding()
             ) {
                 // TODO: Q1: just use item (not items) to show list of countries?
-//                // implement Q1 here
+                // implement Q1 here
 
                 // TODO: Q2: how to make list more efficient in this state?
 //                items(
-//                    StateHolder.listInfo.size,
+//                    StateHolder.listInfo.size
 //                ) { index ->
 //                    Row(
 //                        modifier = Modifier
@@ -61,7 +61,7 @@ fun HomeScreen() {
 //                        verticalAlignment = Alignment.CenterVertically
 //                    ) {
 //                        Text(
-//                            text = StateHolder.listInfo[index],
+//                            text = StateHolder.listInfo[index]
 //                        )
 //                    }
 //                }
